@@ -53,7 +53,7 @@ public class RefitTests
             Job = "Vinař"
         };
         var response = await _userApiClient.PutUserAsync(2, updateUser);
-        Assert.That(response.Job, Is.EqualTo("Programator"));
+        Assert.That(response.Job, Is.EqualTo("Vinař"));
     }
 
     [Test]
