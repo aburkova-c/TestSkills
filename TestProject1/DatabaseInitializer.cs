@@ -557,7 +557,7 @@ namespace apitest
             new { UserId = 12, OrderDate = "2026-04-22", Status = "Delivered", TotalPrice = 69990 },
             new { UserId = 13, OrderDate = "2026-05-03", Status = "Processing", TotalPrice = 12880 },
             new { UserId = 14, OrderDate = "2026-05-15", Status = "Delivered", TotalPrice = 24990 },
-            new { UserId = 15, OrderDate = "2026-06-01", Status = "Delivered", TotalPrice = 119990 },
+            new { UserId = 15, OrderDate = "2026-06-01", Status = "Delivered", TotalPrice = 124980 },
             new { UserId = 1, OrderDate = "2026-06-15", Status = "Processing", TotalPrice = 15970 },
             new { UserId = 3, OrderDate = "2026-07-01", Status = "Delivered", TotalPrice = 9990 }
         };
@@ -632,6 +632,7 @@ namespace apitest
 
             // Order 15
             new { OrderId = 15, ProductId = 10, Quantity = 1, UnitPrice = 119990 },
+            new { OrderId = 15, ProductId = 15, Quantity = 1, UnitPrice = 4990 },
 
             // Order 16
             new { OrderId = 16, ProductId = 18, Quantity = 1, UnitPrice = 5990 },
