@@ -1,6 +1,7 @@
 ﻿using Microsoft.Playwright;                                                                                                                
 using NUnit.Framework;                                                                                                                     
 using Shop.UiTests;
+using Shop.UiTests.Pages.Heroku;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
@@ -14,7 +15,6 @@ public class LoginTests : BaseTest
         await Page.GetByLabel("Password").FillAsync("secret_sauce");                                                                       
         await Page.GetByRole(AriaRole.Button, new() { Name = "Login" })                                                                    
             .ClickAsync();                                                                                                                 
-                                                                                                                                             
         await Expect(Page.GetByText("Products"))                                                        
             .ToBeVisibleAsync(); 
     }
