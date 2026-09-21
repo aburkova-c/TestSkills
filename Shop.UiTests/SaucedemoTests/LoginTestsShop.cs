@@ -6,7 +6,7 @@ using Shop.UiTests.Pages.Heroku;
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
 
-public class LoginTests : BaseTest
+public class LoginTestsShop : BaseTest
 {
     [Test]
     public async Task Login_WithValidCredentials_OpensOrders()
