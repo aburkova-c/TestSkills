@@ -27,4 +27,13 @@ public class ProductsPage
         await CartIcon.ClickAsync();
         return new CartPage(Page);
     }
+
+    public async Task<string> GetItemPrice(string itemName)
+    { 
+        return await ProductCard(itemName)
+            .Locator(".inventory_item_price")
+            .TextContentAsync();
+    }
+    
+    
 }

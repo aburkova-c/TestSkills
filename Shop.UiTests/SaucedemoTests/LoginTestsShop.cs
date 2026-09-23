@@ -1,7 +1,7 @@
 ﻿using Microsoft.Playwright;                                                                                                                
 using NUnit.Framework;                                                                                                                     
 using Shop.UiTests;
-using Shop.UiTests.Pages.Heroku;
+using Shop.UiTests.Pages.Saucedemo;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
