@@ -1,11 +1,12 @@
 ﻿using Microsoft.Playwright;                                                                                                                
 using NUnit.Framework;                                                                                                                     
 using Shop.UiTests;
+using Shop.UiTests.Pages.Saucedemo;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
 
-public class LoginTests : BaseTest
+public class LoginTestsShop : BaseTest
 {
     [Test]
     public async Task Login_WithValidCredentials_OpensOrders()
@@ -14,7 +15,6 @@ public class LoginTests : BaseTest
         await Page.GetByLabel("Password").FillAsync("secret_sauce");                                                                       
         await Page.GetByRole(AriaRole.Button, new() { Name = "Login" })                                                                    
             .ClickAsync();                                                                                                                 
-                                                                                                                                             
         await Expect(Page.GetByText("Products"))                                                        
             .ToBeVisibleAsync(); 
     }
